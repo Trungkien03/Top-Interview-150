@@ -1,3 +1,4 @@
+"use strict";
 /**
  Do not return anything, modify nums1 in-place instead.
  */
@@ -27,12 +28,11 @@
 //   }
 // }
 function merge(nums1, m, nums2, n) {
-  for (var i = m, j = 0; j < n; i++, j++) {
-    nums1[i] = nums2[j];
-  }
-  nums1.sort(function (a, b) {
-    return a - b;
-  });
-  console.log(nums1);
+    for (let i = m, j = 0; j < n; i++, j++) {
+        nums1[i] = nums2[j];
+    }
+    nums1.sort((a, b) => a - b);
+    console.log(nums1);
 }
+// chỉ cần chèn mảng nums2 vào mảng nums1, sau đó sắp xếp lại mảng nums1
 merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
